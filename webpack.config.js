@@ -8,7 +8,7 @@ const root = path.resolve('src')
 const config = {
   output: {
     path: `${root}/../public`,
-    publicPath: "/public"
+    publicPath: "/"
   },
   resolve: {
     alias: {

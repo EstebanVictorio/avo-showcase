@@ -6,6 +6,10 @@ const root = path.resolve('src')
  * @type {import('webpack').Configuration} config
  */
 const config = {
+  output: {
+    path: `${root}/../public`,
+    publicPath: "/public"
+  },
   resolve: {
     alias: {
       components: `${root}/components`,

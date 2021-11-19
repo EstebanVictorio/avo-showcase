@@ -17,3 +17,6 @@ slide:
     theme: default # coy | dark | funky | okaidia | solarizedlight | tomorrow | twilight
 extends:
     webpack: webpack.config.js
+build:
+  useCache: true
+  publicPath: 'public'

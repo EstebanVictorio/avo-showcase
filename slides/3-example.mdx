@@ -1,0 +1,62 @@
+# CSS
+
+```css
+[data-image*="wrapper"] {
+  padding: 1rem;
+  width: 400px;
+  height: 200px;
+}
+
+[data-image="img"] {
+  width: 100%;
+  height: 100%;
+}
+
+[data-image*="error"] {
+  border: 1px solid red;
+}
+
+[data-image*="ok"] {
+  border: 1px solid green;
+}
+```
+
+# HTML
+
+```html
+<figure data-image="wrapper ok">
+  <img data-image="img" src="https://via.placeholder.com/150">
+</figure>
+```
+
+---
+
+# Result
+
+import Example from "components/Example"
+
+<Example />
+
+---
+
+# React.js Example
+
+```jsx
+const Example = () => {
+  const [error, setError] = useState(false)
+  const handleErrorChange = () => {
+    setError(!error)
+  }
+
+  return (
+    <div>
+      <figure css={styles} data-image={`wrapper ${error ? 'error' : 'ok'}`}>
+        <img data-image="img" src={error ? '' : 'https://via.placeholder.com/400x200'} alt="Image not found"/>
+      </figure>
+      <p>Toggle error</p>
+      <Switch onChange={handleErrorChange} checked={error} checkedIcon={false} uncheckedIcon={false}/>
+      {error ? '🙊' : '✅'}
+    </div>
+  )
+}
+```

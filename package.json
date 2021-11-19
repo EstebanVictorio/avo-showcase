@@ -1,0 +1,25 @@
+{
+  "name": "avo-showcase",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "fusuma": "2.8.4"
+  },
+  "scripts": {
+    "slide:init": "fusuma init",
+    "start:prod": "fusuma start-prod",
+    "dev": "fusuma start",
+    "build": "fusuma build",
+    "deploy": "npm run build && fusuma deploy",
+    "pdf": "npm run build && fusuma pdf"
+  },
+  "dependencies": {
+    "@emotion/react": "11.6.0",
+    "@popperjs/core": "2.10.2",
+    "@tippyjs/react": "4.2.6",
+    "react-popper": "2.2.5",
+    "react-rough-notation": "1.0.1",
+    "react-switch": "6.0.0"
+  }
+}

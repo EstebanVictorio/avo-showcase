@@ -19,4 +19,4 @@ extends:
     webpack: webpack.config.js
 build:
   useCache: true
-  publicPath: 'public'
+  publicPath: 'dist'
